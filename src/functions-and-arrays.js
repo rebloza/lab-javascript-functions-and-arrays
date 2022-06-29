@@ -1,19 +1,62 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(a , b) {
+  if (a > b ) {
+    //console.log( a )
+    return a;
+  } else if (a < b) {
+   // console.log( b )
+    return b ;
+  } 
+}
+maxOfTwoNumbers(30 , 20)
+
 
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+
+
+function findLongestWord(wordsArr) {
+  
+  let wordsLong= "" ;
+
+  if (wordsArr.length === 0) {
+    return null
+  }
+
+  for ( let i = 0; i < wordsArr.length; i++ ) {
+
+    if ( wordsArr[i].length > wordsLong.length) {
+      wordsLong = wordsArr[i]
+      //console.log(wordsLong)
+    }
+    
+  }
+  return wordsLong
+} 
 
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+ 
 
-function sumNumbers() {}
+function sumNumbers(numberArr) {
+
+  let calcularSuma = 0
+
+
+  if ( numberArr.length === 0) {
+    return 0
+  }
+
+  for ( let i = 0; i < numberArr.length; i++ ) {
+    calcularSuma = calcularSuma + numberArr[i]
+  } 
+  return calcularSuma
+}
 
 
 
@@ -26,13 +69,31 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(number2) {
+  
+  if (number2.length === 0) {
+    return null
+  }
+   let newsuma1 = sumNumbers(number2) 
+   return newsuma1 / number2.length
+    
+
+}
 
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(longpromedio) {
+  let newlong = 0
+  if (longpromedio.length === 0) {
+    return null
+  }
+  for (let i = 0; i < longpromedio.length; i++) {
+      newlong = newlong + longpromedio[i].length
+   }
+   return  newlong /  longpromedio.length 
+ }
 
 // Bonus - Iteration #4.1
 function avg() {}
@@ -45,14 +106,24 @@ const wordsUnique = [
   'simple',
   'bring',
   'sharp',
-  'playground',
+  'playground', 
   'poison',
   'communion',
   'simple',
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(newArr) {
+   let unicos = []
+   for ( let i = 0; i <wordsUnique.length; i++){
+     let elemento = wordsUnique[i]
+     if (!unicos.indexOf(wordsUnique[i])){
+       unicos.push(elemento)
+     }
+
+   }
+   return unicos 
+}
 
 
 
